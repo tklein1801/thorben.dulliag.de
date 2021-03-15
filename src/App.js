@@ -1,23 +1,19 @@
 import { links } from "./data/links.json";
+import me from "./images/me.jpg";
+import Link from "./components/Link";
 import "./style/_master.scss";
 
 function App() {
-  const githubUserId = 38816229;
-  const githubAvatarUrl = `https://avatars.githubusercontent.com/u/${githubUserId}?v=4`;
   return (
     <div className="wrapper">
       <div className="container">
         <div className="header">
-          <img src={githubAvatarUrl} alt="Picture of mine" />
+          <img src={me} alt="Picture of mine" />
           <p id="username">@Thorben</p>
         </div>
         <div className="body">
           {links.map((link, index) => {
-            return (
-              <a key={index} href={link.target} className="redirect-btn">
-                {link.name}
-              </a>
-            );
+            return <Link key={index} text={link.name} target={link.target} />;
           })}
         </div>
       </div>
