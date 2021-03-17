@@ -17,13 +17,13 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    var instagramResponse = await this.getInstagramProfile();
+    // var instagramResponse = await this.getInstagramProfile();
     // followers => edge_followed_by.count
     // follows => edge_follow.count
-    this.setState({
-      followers: instagramResponse.edge_followed_by.count,
-      follows: instagramResponse.edge_follow.count,
-    });
+    // this.setState({
+    //   followers: instagramResponse.edge_followed_by.count,
+    //   follows: instagramResponse.edge_follow.count,
+    // });
   }
 
   render() {
@@ -33,7 +33,7 @@ export default class App extends Component {
         <div className="container">
           <h3 className="username">Thorben Klein</h3>
 
-          <div className="follower-container">
+          {/* <div className="follower-container">
             <div className="follower">
               <p className="label">Followers</p>
               <p className="count">{followers}</p>
@@ -42,7 +42,7 @@ export default class App extends Component {
               <p className="label">Follows</p>
               <p className="count">{follows}</p>
             </div>
-          </div>
+          </div> */}
 
           <div className="button-container">
             {links.map((link, index) => {
