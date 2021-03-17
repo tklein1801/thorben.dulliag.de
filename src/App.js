@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Link from "./components/Link";
 import { links } from "./data/links.json";
+import Me from "./images/me.jpg";
 import "./style/_master.scss";
 
 export default class App extends Component {
@@ -31,7 +32,8 @@ export default class App extends Component {
     return (
       <div className="wrapper">
         <div className="container">
-          <h3 className="username">Thorben Klein</h3>
+          <img className="me" src={Me} alt="Image of mine" />
+          <h2 className="username">Thorben Klein</h2>
 
           {/* <div className="follower-container">
             <div className="follower">

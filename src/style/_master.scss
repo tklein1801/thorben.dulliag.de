@@ -8,7 +8,11 @@ body {
   margin: 0;
   font-family: "Quicksand";
   scroll-behavior: smooth;
-  background-color: #f8f9fa;
+  background-color: $light;
+  background-image: url(../images/bg.jpg);
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 #root {
   height: 100%;
@@ -25,17 +29,22 @@ body {
   width: 25%;
   min-height: 100%;
   margin-left: calc(75% / 2);
-  background-image: url(../images/me.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 .container {
   width: calc(100% - 4rem);
   padding: 1rem;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: $shadow;
   text-align: center;
+  .me {
+    width: 8rem;
+    height: 8rem;
+    margin-top: -5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    box-shadow: $shadowLg;
+  }
   .username {
     font-family: "Quicksand-Bold";
   }
@@ -51,7 +60,6 @@ body {
     .follower {
       width: 50%;
       padding: 0.5rem 0;
-      // border-right: 1px solid #ccc;
     }
     .follows {
       width: 50%;
@@ -72,9 +80,9 @@ body {
       transition: all 0.2ms;
       width: 100%;
       padding: 0.75rem;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
       text-decoration: none;
-      background-color: #28a745;
+      background-color: $primary;
       font-family: "Quicksand-Bold";
       color: #fff;
       border-radius: 8px;
@@ -83,7 +91,7 @@ body {
       }
       &:hover,
       &:focus {
-        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: $shadow;
       }
     }
   }
@@ -93,7 +101,7 @@ body {
   width: calc(100% - 4rem);
   padding: 1rem 1rem;
   margin-top: 1.5rem;
-  background-color: #28a745;
+  background-color: $primary;
   text-align: center;
   text-decoration: none;
   font-family: "Quicksand-Bold";
@@ -102,11 +110,15 @@ body {
   border-radius: 2rem;
   &:hover,
   &:focus {
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: $shadow;
   }
 }
 
 @media (max-width: $brSm) {
+  html,
+  body {
+    background-size: 150%;
+  }
   .wrapper {
     width: 100%;
     margin-left: 0;
