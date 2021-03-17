@@ -1,7 +1,7 @@
 const Link = (props) => {
   const { text, target } = props;
   return (
-    <a href={target} className="redirect-btn">
+    <a href={target} className="btn">
       {text}
     </a>
   );
