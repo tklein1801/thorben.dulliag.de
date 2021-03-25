@@ -72,6 +72,36 @@ body {
       margin-top: 0.25rem;
     }
   }
+  blockquote {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.5rem 3rem;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 100;
+    &::before,
+    &::after {
+      position: absolute;
+      font-size: 4rem;
+      width: 4rem;
+      height: 0rem;
+    }
+    &:before {
+      content: "“";
+      left: -1rem;
+      top: -1.5rem;
+    }
+    &:after {
+      content: "”";
+      right: 0rem;
+      bottom: 2rem;
+    }
+  }
+  cite {
+    line-height: 1;
+    text-align: left;
+  }
   .button-container {
     display: flex;
     flex-direction: row;
